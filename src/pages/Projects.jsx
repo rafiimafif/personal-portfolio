@@ -295,6 +295,7 @@ const Projects = () => {
                   alt={`${project.title} live interface capture`}
                   className="w-full h-full object-contain bg-slate-950 transition-transform duration-300 group-hover:scale-[1.01]"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/20 transition-colors flex items-center justify-center pointer-events-none">
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-slate-900/95 text-slate-100 text-xs font-mono px-3 py-1.5 rounded-md border border-slate-700 shadow-md flex items-center gap-1.5">
@@ -471,6 +472,7 @@ const Projects = () => {
               <img
                 src={activeModalProject.image}
                 alt={`${activeModalProject.title} full high-resolution capture`}
+                decoding="async"
                 className="w-full h-auto max-h-[74vh] object-contain rounded border border-slate-800 shadow-inner"
               />
             </div>

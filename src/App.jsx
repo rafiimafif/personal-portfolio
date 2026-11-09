@@ -45,6 +45,8 @@ function SEOUpdater() {
   const location = useLocation();
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+
     const meta = pageMeta[location.pathname] || {
       title: "Rafii Afif - DevSecOps Engineer",
       description:
@@ -85,10 +87,16 @@ function App() {
     <ThemeProvider>
       <BrowserRouter>
         <SEOUpdater />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2.5 focus:rounded-lg focus:bg-emerald-600 focus:text-white focus:font-semibold focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
         <div className="min-h-screen flex flex-col relative">
           <Background3D />
           <Navbar />
-          <main className="flex-grow">
+          <main id="main-content" className="flex-grow">
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<Home />} />

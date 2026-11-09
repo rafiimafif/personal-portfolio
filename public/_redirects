@@ -1,1 +1,8 @@
-/*    /index.html   200
+/.env*  /404.html  404
+/.git/*  /404.html  404
+/about  /index.html  200
+/projects  /index.html  200
+/certificates  /index.html  200
+/contact  /index.html  200
+/*  /index.html  200
+

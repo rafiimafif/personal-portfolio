@@ -62,7 +62,19 @@ const Background3D = ({
   const meshRef = useRef(null);
   const cleanupFunctionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() =>
+    typeof window !== "undefined"
+      ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      : false,
+  );
   const observerRef = useRef(null);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handleChange = (e) => setPrefersReducedMotion(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -86,8 +98,8 @@ const Background3D = ({
   }, []);
 
   useEffect(() => {
-    // In light mode, skip dark WebGL rays so the page stays a uniform clean light background
-    if (isLight || !isVisible || !containerRef.current) {
+    // In light mode or when reduced motion is preferred, skip WebGL shader loop
+    if (isLight || prefersReducedMotion || !isVisible || !containerRef.current) {
       if (cleanupFunctionRef.current) {
         cleanupFunctionRef.current();
         cleanupFunctionRef.current = null;
@@ -351,6 +363,7 @@ void main() {
     };
   }, [
     isLight,
+    prefersReducedMotion,
     isVisible,
     raysOrigin,
     raysColor,

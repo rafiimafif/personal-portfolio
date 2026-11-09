@@ -101,7 +101,11 @@ const stages = [
 
 export const SSDLCFlowAnimation = () => {
   const [activeStageIndex, setActiveStageIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(() =>
+    typeof window !== "undefined"
+      ? !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      : true,
+  );
   const [speedMultiplier, setSpeedMultiplier] = useState(1);
   const [selectedStage, setSelectedStage] = useState(0);
   const { theme } = useTheme();
