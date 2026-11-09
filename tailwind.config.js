@@ -6,7 +6,12 @@ export default {
     './src/**/*.{js,jsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
   future: {
