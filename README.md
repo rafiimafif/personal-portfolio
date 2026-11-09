@@ -96,10 +96,10 @@ A modern, high-performance personal portfolio website built with **React 18 + Vi
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/rafiimafif/Personal-portfolio.git
+git clone https://github.com/rafiimafif/personal-portfolio.git
 
 # 2. Navigate to project folder
-cd Personal-portfolio
+cd personal-portfolio
 
 # 3. Install dependencies
 npm install
@@ -131,6 +131,6 @@ npm run build
 
 This repository is licensed under the **MIT License**.
 
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=rafiimafif%2FPersonal-portfolio&label=Visitors&labelColor=%23000000&countColor=%2322d3ee)](https://visitorbadge.io/status?path=rafiimafif%2FPersonal-portfolio)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=rafiimafif%2Fpersonal-portfolio&label=Visitors&labelColor=%23000000&countColor=%2322d3ee)](https://visitorbadge.io/status?path=rafiimafif%2Fpersonal-portfolio)
 
 </div>
