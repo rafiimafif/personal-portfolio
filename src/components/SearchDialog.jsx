@@ -34,6 +34,27 @@ const baseSearchData = [
     keywords: ['ssdlc', 'pipeline', 'jenkins shared library', 'threat dragon', 'eol', 'monorepoPipelineTemplate', 'legacyDotnetPipeline', 'gradlePipeline', 'cosign', 'sbom', 'cyclonedx', 'gitleaks', 'checkov', 'owasp zap', 'dast', 'sast', 'sca', 'axa'],
   },
   {
+    title: 'Mythos Vulnerability Remediator Suite',
+    category: 'AXA DevSecOps',
+    description: 'PowerShell desktop hardening & Qualys remediation engine across 31 enterprise hosts',
+    path: '/projects',
+    keywords: ['mythos', 'remediator', 'qualys', 'powershell', 'schannel', 'tls', 'iis', 'hardening', 'vulnerability', 'axa'],
+  },
+  {
+    title: 'CARE Enterprise Reporting Engine',
+    category: 'AXA Engineering',
+    description: 'Node.js & SQL Server reporting platform replacing 95+ legacy Crystal Reports (.rpt)',
+    path: '/projects',
+    keywords: ['care', 'chiss', 'reporting engine', 'crystal reports', 'sql server', 'exceljs', 'pdfkit', 'nodejs', 'axa'],
+  },
+  {
+    title: 'Master Excel Packages Tracker',
+    category: 'AXA DevSecOps',
+    description: 'Zero-dependency Python 3.11 OpenShift service aggregating CycloneDX SBOMs to Excel',
+    path: '/projects',
+    keywords: ['master excel', 'sbom', 'cyclonedx', 'python', 'openshift', 'dependency', 'inventory', 'axa'],
+  },
+  {
     title: 'Projects & Client Deliveries',
     category: 'Page',
     description: 'Verified client contracts, full-stack platforms, and engineering labs',

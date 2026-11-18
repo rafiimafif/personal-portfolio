@@ -70,6 +70,9 @@ const About = () => {
         "Enforced mandatory Checkmarx One AST (SAST/SCA), SonarQube Quality Gates, Trivy FS/Image scanning, Gitleaks secret detection, Checkov IaC scanning, and OWASP ZAP DAST with Kubernetes API port-forwarding tunnels.",
         "Engineered Sigstore Cosign v3 offline container image signing using OpenShift SHA256 digests and local .sig bundles alongside CycloneDX SBOM generation for supply chain security.",
         "Modernized zero-boilerplate Jenkins Shared Libraries (pipelineTemplate, templatePipelineOnprem, monorepoPipelineTemplate, legacyDotnetPipeline, gradlePipeline, minimumPipeline) supporting Java, .NET 8/10, Legacy VB.NET/Framework 4.x on Linux, Node.js, and PHP.",
+        "Built the Mythos Vulnerability Remediator Suite (PowerShell) to audit and harden 31 enterprise servers against Qualys findings (Schannel TLS 1.2/1.3, IIS security headers, LSA/SAM locks, bloatware cleanup) with dry-run simulation and SOC-compliant zero-bypass execution.",
+        "Engineered the CARE Enterprise Reporting Engine (Node.js, Express, ExcelJS, PDFKit, native ADO.NET SQL Server bridge) to modernize 95+ legacy SAP Crystal Reports (.rpt) and ASP.NET WebForms reports into interactive web tables and styled Excel/PDF/TXT exports.",
+        "Deployed the Master Excel Packages Tracker (zero-dependency Python 3.11 on OpenShift with EBS PVC) to ingest CycloneDX SBOMs from Jenkins builds into a centralized, thread-safe multi-sheet dependency inventory.",
         "Established centralized envConfig project mapping, non-blocking warning stage handling, and automated weekly workspace maintenance to keep CI environments resilient and clean.",
       ],
     },
@@ -274,6 +277,18 @@ const About = () => {
       icon: <Layout className="w-6 h-6" aria-hidden="true" />,
       description:
         "Enforced Quality Gates with SonarQube API verification and built real-time Grafana dashboards for proactive incident management and system anomaly tracking.",
+    },
+    {
+      title: "Mythos Vulnerability Remediator",
+      icon: <Wrench className="w-6 h-6" aria-hidden="true" />,
+      description:
+        "Engineered a PowerShell desktop automation suite hardening 31 enterprise servers against Qualys findings (Schannel TLS 1.2/1.3, IIS headers, LSA/SAM locks) with simulation/live modes and zero TLS bypasses.",
+    },
+    {
+      title: "CARE Reporting & Master SBOM Engines",
+      icon: <Database className="w-6 h-6" aria-hidden="true" />,
+      description:
+        "Built the CARE Enterprise Reporting Engine (Node.js, SQL Server, ExcelJS/PDFKit) modernizing 95+ Crystal Reports, plus the Python 3.11 OpenShift Master Excel Packages Tracker aggregating Jenkins CycloneDX SBOMs.",
     },
   ];
 

@@ -48,6 +48,27 @@ const axaHighlights = [
       "Managed OpenShift BuildConfigs, zero-downtime rolling updates, Pod Disruption Budgets, and JFrog Artifactory package storage alongside real-time Grafana metrics dashboards.",
     tags: ["OpenShift", "Kubernetes", "JFrog Artifactory", "Grafana", "Rolling Deploy"],
   },
+  {
+    title: "Mythos Vulnerability Remediator Suite",
+    label: "Vulnerability Automation",
+    description:
+      "Engineered a PowerShell desktop automation suite hardening 31 enterprise Windows/SQL servers against Qualys findings—automating Schannel TLS 1.2/1.3 & cipher hardening, IIS security headers, LSA/SAM identity locks, and dry-run/live HTML & CSV audit proof.",
+    tags: ["PowerShell", "Qualys", "Schannel TLS", "IIS Hardening", "SOC Compliant"],
+  },
+  {
+    title: "CARE Enterprise Reporting Engine",
+    label: "Core System Modernization",
+    description:
+      "Built a modular Node.js (Express, ExcelJS, PDFKit) reporting platform replacing legacy SAP Crystal Reports (.rpt) and ASP.NET WebForms across CARE CHISS/CGISS—featuring native ADO.NET SQL Server bridging, 95+ catalog reports, F2 live lookups, and formula-driven Excel/PDF/TXT exports.",
+    tags: ["Node.js", "Express", "SQL Server", "ExcelJS", "PDFKit", "CHISS"],
+  },
+  {
+    title: "Master Excel Packages Tracker",
+    label: "SBOM & Supply Chain",
+    description:
+      "Deployed a zero-dependency Python 3.11 SBOM aggregation service on Red Hat OpenShift (AWS EBS PVC) that ingests CycloneDX payloads from Jenkins CI/CD via thread-safe REST APIs into a multi-sheet master Excel inventory.",
+    tags: ["Python 3.11", "CycloneDX", "OpenShift", "REST API", "Excel Inventory"],
+  },
 ];
 
 const Projects = () => {
