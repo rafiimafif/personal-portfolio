@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
-import { Github, ExternalLink, Maximize2, X, Briefcase, Layers, CheckCircle2 } from "lucide-react";
+import { Github, ExternalLink, Maximize2, X, Briefcase, Layers, CheckCircle2, Sparkles } from "lucide-react";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import { projects } from "@/data/projects";
 import { SSDLCFlowAnimation } from "@/components/SSDLCFlowAnimation";
 import { useTheme } from "../context/ThemeContext";
+import mythosImg from "@/assets/axa_engines/mythos-remediator.png";
+import careReportingImg from "@/assets/axa_engines/care-reporting-engine.png";
+import masterExcelImg from "@/assets/axa_engines/master-excel-sbom.png";
 
 const axaHighlights = [
   {
@@ -48,26 +51,41 @@ const axaHighlights = [
       "Managed OpenShift BuildConfigs, zero-downtime rolling updates, Pod Disruption Budgets, and JFrog Artifactory package storage alongside real-time Grafana metrics dashboards.",
     tags: ["OpenShift", "Kubernetes", "JFrog Artifactory", "Grafana", "Rolling Deploy"],
   },
+];
+
+const axaEngines = [
   {
     title: "Mythos Vulnerability Remediator Suite",
+    systemId: "mythos.remediator.v3",
+    badge: "31 Enterprise Hosts",
     label: "Vulnerability Automation",
+    image: mythosImg,
+    impact: "Manual Qualys patching → 1-click dry-run & live fleet hardening",
     description:
-      "Engineered a PowerShell desktop automation suite hardening 31 enterprise Windows/SQL servers against Qualys findings—automating Schannel TLS 1.2/1.3 & cipher hardening, IIS security headers, LSA/SAM identity locks, and dry-run/live HTML & CSV audit proof.",
-    tags: ["PowerShell", "Qualys", "Schannel TLS", "IIS Hardening", "SOC Compliant"],
+      "Solo-engineered a PowerShell v3.0 Granular Matrix desktop engine to shortcut tedious server-by-server Qualys remediation into full automation—enforcing Schannel TLS 1.2/1.3 & cipher hardening, IIS security headers, LSA/SAM identity locks, and bloatware cleanup with zero TLS bypasses and instant HTML/CSV audit proof.",
+    tags: ["PowerShell", "Qualys", "Schannel TLS", "IIS Hardening", "WinRM / SMB", "SOC Compliant"],
   },
   {
     title: "CARE Enterprise Reporting Engine",
+    systemId: "care.chiss.reporting",
+    badge: "95+ Reports • Replaces .RPT",
     label: "Core System Modernization",
+    image: careReportingImg,
+    impact: "Legacy Crystal Reports (.rpt) → Modern Node.js & SQL Server portal",
     description:
-      "Built a modular Node.js (Express, ExcelJS, PDFKit) reporting platform replacing legacy SAP Crystal Reports (.rpt) and ASP.NET WebForms across CARE CHISS/CGISS—featuring native ADO.NET SQL Server bridging, 95+ catalog reports, F2 live lookups, and formula-driven Excel/PDF/TXT exports.",
+      "Built a custom Node.js (Express, ExcelJS, PDFKit) reporting engine replacing legacy SAP Crystal Reports and ASP.NET WebForms across CARE CHISS/CGISS—featuring a native ADO.NET SQL Server bridge, F2 live lookups, formula-driven filtering, and styled Excel/PDF/TXT exports.",
     tags: ["Node.js", "Express", "SQL Server", "ExcelJS", "PDFKit", "CHISS"],
   },
   {
     title: "Master Excel Packages Tracker",
+    systemId: "master.sbom.tracker",
+    badge: "27 Services • 5,021 Packages",
     label: "SBOM & Supply Chain",
+    image: masterExcelImg,
+    impact: "Scattered Jenkins SBOMs → Real-time OpenShift dependency hub",
     description:
-      "Deployed a zero-dependency Python 3.11 SBOM aggregation service on Red Hat OpenShift (AWS EBS PVC) that ingests CycloneDX payloads from Jenkins CI/CD via thread-safe REST APIs into a multi-sheet master Excel inventory.",
-    tags: ["Python 3.11", "CycloneDX", "OpenShift", "REST API", "Excel Inventory"],
+      "Engineered a zero-dependency Python 3.11 service on Red Hat OpenShift (AWS EBS PVC) that automatically ingests CycloneDX SBOMs from every Jenkins build via thread-safe REST APIs—giving security and engineering teams live package visibility and one-click multi-sheet .xlsx exports.",
+    tags: ["Python 3.11", "CycloneDX", "OpenShift", "REST API", "EBS PVC", "Excel Inventory"],
   },
 ];
 
@@ -180,6 +198,118 @@ const Projects = () => {
                 </div>
               </ScrollAnimation>
             ))}
+          </div>
+
+          <div className="mt-14 pt-10 border-t border-slate-200/80 dark:border-slate-800/80">
+            <div className="flex items-center justify-between gap-4 mb-6 flex-wrap">
+              <div>
+                <p className={`inline-flex items-center gap-1.5 text-xs uppercase tracking-widest font-mono font-semibold mb-1.5 ${
+                  isLight ? "text-amber-700" : "text-amber-400"
+                }`}>
+                  <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
+                  <span>Bespoke Solo-Engineered Systems</span>
+                </p>
+                <h4 className={`text-xl sm:text-2xl font-bold tracking-tight ${isLight ? "text-slate-900" : "text-white"}`}>
+                  Custom Enterprise Automation Engines
+                </h4>
+                <p className={`mt-1.5 max-w-3xl text-sm leading-relaxed ${isLight ? "text-slate-600" : "text-slate-400"}`}>
+                  Purpose-built internal engines engineered from scratch to turn complex, manual enterprise bottlenecks into zero-touch automated workflows. Click any capture to inspect full-resolution UI.
+                </p>
+              </div>
+              <span className={`px-3 py-1 text-xs uppercase tracking-wider font-mono rounded-md border font-medium ${
+                isLight
+                  ? "border-amber-300 bg-amber-50 text-amber-800"
+                  : "border-amber-500/30 bg-amber-500/10 text-amber-300"
+              }`}>
+                Full Automation Shortcuts
+              </span>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-6">
+              {axaEngines.map((engine) => (
+                <ScrollAnimation key={engine.systemId}>
+                  <div className={`h-full flex flex-col rounded-2xl border overflow-hidden transition-all ${
+                    isLight
+                      ? "bg-white border-slate-200 shadow-sm hover:border-emerald-300 hover:shadow-md"
+                      : "bg-slate-900/90 border-slate-800 hover:border-emerald-500/40"
+                  }`}>
+                    <div className="relative group overflow-hidden border-b border-slate-200 dark:border-slate-800 bg-slate-950 aspect-[16/10]">
+                      <img
+                        src={engine.image}
+                        alt={`${engine.title} live application interface`}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent opacity-80" />
+                      <div className="absolute top-3 left-3 flex items-center gap-2">
+                        <span className="px-2.5 py-1 text-[11px] font-mono font-semibold uppercase tracking-wider rounded-md bg-slate-950/85 text-emerald-300 border border-emerald-500/30 backdrop-blur-sm">
+                          {engine.label}
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setActiveModalProject({
+                            ...engine,
+                            category: "enterprise-engine",
+                            clientSector: "AXA Insurance Indonesia (Internal)",
+                          })
+                        }
+                        className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-950/85 text-white border border-white/20 hover:bg-emerald-600 hover:border-emerald-400 transition-colors backdrop-blur-sm"
+                        aria-label={`Inspect ${engine.title} screenshot`}
+                      >
+                        <Maximize2 className="w-3.5 h-3.5" aria-hidden="true" />
+                        <span>Inspect UI</span>
+                      </button>
+                    </div>
+
+                    <div className="p-5 sm:p-6 flex flex-col flex-grow">
+                      <div className="flex items-center justify-between gap-2 mb-2 flex-wrap">
+                        <span className={`text-[11px] font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded border ${
+                          isLight
+                            ? "bg-emerald-50 text-emerald-800 border-emerald-200"
+                            : "bg-emerald-500/10 text-emerald-300 border-emerald-500/25"
+                        }`}>
+                          {engine.badge}
+                        </span>
+                      </div>
+
+                      <h5 className={`text-lg font-bold mb-2 ${isLight ? "text-slate-900" : "text-white"}`}>
+                        {engine.title}
+                      </h5>
+
+                      <p className={`text-xs font-mono font-medium mb-3 px-2.5 py-1.5 rounded-lg border ${
+                        isLight
+                          ? "bg-slate-50 border-slate-200 text-slate-700"
+                          : "bg-slate-950/70 border-slate-800 text-emerald-300"
+                      }`}>
+                        {engine.impact}
+                      </p>
+
+                      <p className={`text-sm leading-relaxed mb-5 flex-grow ${isLight ? "text-slate-600" : "text-slate-400"}`}>
+                        {engine.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                        {engine.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className={`px-2 py-0.5 text-[11px] font-mono rounded border ${
+                              isLight
+                                ? "bg-slate-50 text-slate-700 border-slate-200"
+                                : "bg-slate-800/60 text-slate-300 border-slate-700"
+                            }`}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </ScrollAnimation>
+              ))}
+            </div>
           </div>
         </div>
       </ScrollAnimation>
@@ -474,6 +604,11 @@ const Projects = () => {
                     Client Delivery
                   </span>
                 )}
+                {activeModalProject.category === "enterprise-engine" && (
+                  <span className="hidden md:inline px-2 py-0.5 text-[10px] rounded bg-amber-500/20 text-amber-400 border border-amber-500/30 font-semibold uppercase">
+                    Enterprise Engine
+                  </span>
+                )}
               </div>
               <button
                 type="button"
@@ -504,22 +639,32 @@ const Projects = () => {
                 : "bg-slate-950/80 border-slate-800 text-slate-400"
             }`}>
               <div className="flex items-center gap-2">
-                <span>Captured Live Environment &bull; 1440x900 Native Aspect</span>
+                <span>
+                  {activeModalProject.category === "enterprise-engine"
+                    ? "Captured Production / Internal Environment"
+                    : "Captured Live Environment • 1440x900 Native Aspect"}
+                </span>
                 {activeModalProject.clientSector && (
                   <span className="hidden sm:inline text-slate-500">
-                    &bull; Client: {activeModalProject.clientSector}
+                    &bull; {activeModalProject.category === "enterprise-engine" ? "Org" : "Client"}: {activeModalProject.clientSector}
                   </span>
                 )}
               </div>
-              <a
-                href={activeModalProject.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-emerald-500 hover:underline inline-flex items-center gap-1 font-medium min-h-[44px] px-2"
-              >
-                <span>Inspect Repository</span>
-                <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
-              </a>
+              {activeModalProject.github ? (
+                <a
+                  href={activeModalProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-500 hover:underline inline-flex items-center gap-1 font-medium min-h-[44px] px-2"
+                >
+                  <span>Inspect Repository</span>
+                  <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+                </a>
+              ) : (
+                <span className="text-amber-500 font-medium px-2">
+                  Internal Proprietary Engine
+                </span>
+              )}
             </div>
           </div>
         </div>
