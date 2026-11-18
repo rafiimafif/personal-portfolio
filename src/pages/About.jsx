@@ -64,15 +64,13 @@ const About = () => {
       period: "05/2026 - Present",
       type: "Full-time",
       description: [
-        "Successfully implemented an end-to-end SSDLC (Secure Software Development Life Cycle) framework across enterprise application pipelines, embedding 100% security gate compliance from source code check-in through production release.",
-        "Integrated SAST (SonarQube, Snyk Code, Checkmarx), SCA (Snyk Open Source, Trivy FS, DependencyCheck), DAST (OWASP ZAP), and IaC Scanning (Checkov) into automated CI/CD workflows, shifting security left.",
-        "Engineered Sigstore Cosign v3 offline container image signing using OpenShift SHA256 digests and local .sig bundles to ensure artifact authenticity and container supply chain security.",
-        "Automated OWASP ZAP DAST scanning with Kubernetes API port-forwarding tunnels and reachability auto-detection to assess deployed staging and pre-prod endpoints.",
-        "Enforced Gitleaks secret detection across git commit histories, preventing plain-text credentials and private key exposures.",
-        "Standardized SBOM (Software Bill of Materials) generation using CycloneDX across Java, Node.js, and PHP projects for complete supply chain transparency.",
-        "Implemented SonarQube Quality Gates with automated API verification to enforce strict code quality, security coverage, and build gating rules.",
-        "Modernized zero-boilerplate Jenkins Shared Libraries, enabling multi-stack development teams (Java Maven, .NET, Node.js, PHP Symfony/Pimcore) to adopt standardized DevSecOps controls effortlessly.",
-        "Established non-blocking warning stage handling and automated weekly workspace maintenance to maintain pipeline resilience and clean CI environment hygiene.",
+        "Successfully implemented an end-to-end SSDLC (Secure Software Development Life Cycle) framework across enterprise application pipelines, embedding 100% security gate compliance and branch-aware gating (UNSTABLE yellow warnings on dev/feature vs hard FAILURE blocks on master/release/*).",
+        "Integrated OWASP Threat Dragon v2.6.2 automated threat modeling (STRIDE auditing, JSON schema validation, interactive HTML reporting, and Artifactory archival) across all pipeline orchestrators.",
+        "Implemented mandatory Tech Stack End-of-Life (EOL) & lifecycle governance auditing Node.js, Java, .NET Core/Framework, and PHP runtimes with traffic-light compliance dashboards.",
+        "Enforced mandatory Checkmarx One AST (SAST/SCA), SonarQube Quality Gates, Trivy FS/Image scanning, Gitleaks secret detection, Checkov IaC scanning, and OWASP ZAP DAST with Kubernetes API port-forwarding tunnels.",
+        "Engineered Sigstore Cosign v3 offline container image signing using OpenShift SHA256 digests and local .sig bundles alongside CycloneDX SBOM generation for supply chain security.",
+        "Modernized zero-boilerplate Jenkins Shared Libraries (pipelineTemplate, templatePipelineOnprem, monorepoPipelineTemplate, legacyDotnetPipeline, gradlePipeline, minimumPipeline) supporting Java, .NET 8/10, Legacy VB.NET/Framework 4.x on Linux, Node.js, and PHP.",
+        "Established centralized envConfig project mapping, non-blocking warning stage handling, and automated weekly workspace maintenance to keep CI environments resilient and clean.",
       ],
     },
     {
@@ -169,6 +167,8 @@ const About = () => {
         { name: "Cosign (Signing)", icon: <Wrench className="w-4 h-4" aria-hidden="true" /> },
         { name: "OWASP ZAP (DAST)", icon: <Wrench className="w-4 h-4" aria-hidden="true" /> },
         { name: "Checkmarx", icon: <Wrench className="w-4 h-4" aria-hidden="true" /> },
+        { name: "OWASP Threat Dragon", icon: <Wrench className="w-4 h-4" aria-hidden="true" /> },
+        { name: "Tech Stack EOL Audit", icon: <Wrench className="w-4 h-4" aria-hidden="true" /> },
         { name: "CycloneDX (SBOM)", icon: <Wrench className="w-4 h-4" aria-hidden="true" /> },
       ],
     },
@@ -252,16 +252,16 @@ const About = () => {
 
   const axaHighlights = [
     {
-      title: "Enterprise SSDLC Framework",
+      title: "Enterprise SSDLC & Threat Governance",
       icon: <Wrench className="w-6 h-6" aria-hidden="true" />,
       description:
-        "Implemented a 100% compliant SSDLC framework embedding automated security gates, SAST (SonarQube, Snyk Code, Checkmarx), SCA (Snyk, Trivy), Gitleaks secret detection, Checkov IaC, Cosign image signing, OWASP ZAP DAST, and CycloneDX SBOM.",
+        "Implemented a 100% compliant SSDLC framework with branch-aware gating, mandatory Tech Stack EOL audits, OWASP Threat Dragon v2.6.2 STRIDE modeling, Checkmarx One AST, SonarQube, Trivy, Gitleaks, Checkov, Cosign v3, OWASP ZAP, and CycloneDX SBOM.",
     },
     {
       title: "Reusable Jenkins Shared Library",
       icon: <Server className="w-6 h-6" aria-hidden="true" />,
       description:
-        "Modernized modular Groovy pipeline orchestrators (templatePipelineOnprem, pipelineTemplate, legacyDotnetPipeline) allowing multi-stack teams (Java, .NET, Node.js, PHP) to consume standard DevSecOps logic with zero boilerplate.",
+        "Modernized modular Groovy orchestrators (pipelineTemplate, templatePipelineOnprem, monorepoPipelineTemplate, legacyDotnetPipeline, gradlePipeline, minimumPipeline) allowing multi-stack teams (Java, .NET 8/10, Legacy VB.NET, Node.js, PHP) to adopt DevSecOps with zero boilerplate.",
     },
     {
       title: "OpenShift & Kubernetes Management",
@@ -306,7 +306,7 @@ const About = () => {
               With a background spanning full-stack development, IT operations, and cloud infrastructure, I bridge development, security, and operations—building zero-trust CI/CD pipelines, standardizing release automation, and enforcing shift-left security controls.
             </p>
             <p className={`leading-relaxed ${isLight ? "text-slate-600" : "text-slate-300"}`}>
-              My daily stack includes Jenkins, OpenShift, Kubernetes, Docker, SonarQube, Snyk, Trivy, Gitleaks, Checkmarx, OWASP ZAP, CycloneDX, and JFrog Artifactory.
+              My daily stack includes Jenkins, OpenShift, Kubernetes, Docker, SonarQube, Snyk, Trivy, Gitleaks, Checkmarx, OWASP Threat Dragon, OWASP ZAP, CycloneDX, and JFrog Artifactory.
             </p>
           </div>
 

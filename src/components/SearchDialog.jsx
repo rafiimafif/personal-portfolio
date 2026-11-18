@@ -22,16 +22,16 @@ const baseSearchData = [
   {
     title: 'Technical Skills & Security Stack',
     category: 'AXA DevSecOps',
-    description: 'SSDLC, SonarQube, Snyk, Trivy, Gitleaks, Checkov, Cosign, OWASP ZAP, Jenkins, OpenShift',
+    description: 'SSDLC, OWASP Threat Dragon, Tech Stack EOL, Checkmarx AST, SonarQube, Trivy, Gitleaks, Checkov, Cosign, OWASP ZAP, Jenkins, OpenShift',
     path: '/about',
-    keywords: ['skills', 'technologies', 'DevSecOps', 'SSDLC', 'Snyk', 'Trivy', 'SonarQube', 'Gitleaks', 'CycloneDX', 'Checkmarx', 'Checkov', 'Cosign', 'OWASP ZAP', 'Playwright', 'Jenkins', 'Docker', 'OpenShift', 'Kubernetes', 'AWS', 'Grafana', 'Artifactory', 'Groovy', 'Bash'],
+    keywords: ['skills', 'technologies', 'DevSecOps', 'SSDLC', 'Threat Dragon', 'STRIDE', 'EOL', 'Snyk', 'Trivy', 'SonarQube', 'Gitleaks', 'CycloneDX', 'Checkmarx', 'Checkov', 'Cosign', 'OWASP ZAP', 'Playwright', 'Jenkins', 'Docker', 'OpenShift', 'Kubernetes', 'AWS', 'Grafana', 'Artifactory', 'Groovy', 'Bash'],
   },
   {
     title: 'Enterprise SSDLC DevSecOps Flow',
     category: 'AXA DevSecOps',
-    description: 'Interactive 4-stage zero-trust CI/CD pipeline orchestrator & console logs',
+    description: 'Interactive 4-stage zero-trust CI/CD pipeline orchestrator, Threat Dragon & console logs',
     path: '/projects',
-    keywords: ['ssdlc', 'pipeline', 'jenkins shared library', 'cosign', 'sbom', 'cyclonedx', 'gitleaks', 'checkov', 'owasp zap', 'dast', 'sast', 'sca', 'axa'],
+    keywords: ['ssdlc', 'pipeline', 'jenkins shared library', 'threat dragon', 'eol', 'monorepoPipelineTemplate', 'legacyDotnetPipeline', 'gradlePipeline', 'cosign', 'sbom', 'cyclonedx', 'gitleaks', 'checkov', 'owasp zap', 'dast', 'sast', 'sca', 'axa'],
   },
   {
     title: 'Projects & Client Deliveries',

@@ -7,32 +7,32 @@ import { useTheme } from "../context/ThemeContext";
 
 const axaHighlights = [
   {
-    title: "SSDLC Framework & Zero-Trust Governance",
+    title: "SSDLC Framework & Branch-Aware Governance",
     label: "Security Engineering",
     description:
-      "Engineered an enterprise SSDLC framework embedding 100% security gate compliance, branch-based environment routing (master/release/* vs development), PR checks, and non-blocking warning handling.",
-    tags: ["SSDLC", "Zero-Trust", "Shift-Left", "Security Gates", "Branch Policy"],
+      "Engineered an enterprise SSDLC framework enforcing mandatory Tech Stack EOL checks, branch-aware gating (UNSTABLE yellow warnings on dev/feature vs hard FAILURE blocks on master/release/*), and centralized envConfig routing.",
+    tags: ["SSDLC", "Branch-Aware Gate", "Tech Stack EOL", "Zero-Trust", "envConfig"],
   },
   {
     title: "Jenkins Shared Library Modernization",
     label: "Platform Engineering",
     description:
-      "Created zero-boilerplate Groovy shared library orchestrators (templatePipelineOnprem, pipelineTemplate, legacyDotnetPipeline) standardizing build, SAST, SCA, and deployment flows across Java, .NET, Node.js, and PHP.",
-    tags: ["Jenkins", "Groovy", "Shared Library", "Multi-Stack", "Automation"],
+      "Built zero-boilerplate Groovy orchestrators (pipelineTemplate, templatePipelineOnprem, monorepoPipelineTemplate, legacyDotnetPipeline, gradlePipeline, minimumPipeline) standardizing CI/CD across Java, .NET 8/10, Legacy VB.NET on Linux, Node.js, and PHP.",
+    tags: ["Jenkins", "Groovy", "Monorepo Git-Diff", "Legacy .NET/VB", "Multi-Stack"],
   },
   {
-    title: "Multi-Tool SAST, SCA, DAST & Secrets",
-    label: "Vulnerability Auditing",
+    title: "Threat Modeling, SAST, SCA & DAST",
+    label: "Vulnerability & Threat Audit",
     description:
-      "Orchestrated SAST (SonarQube, Snyk Code, Checkmarx), SCA (Snyk, Trivy FS, DepCheck), Gitleaks secret detection, Checkov IaC security, and OWASP ZAP DAST with K8s API port-forwarding.",
-    tags: ["SonarQube", "Snyk", "Trivy", "Gitleaks", "Checkov", "OWASP ZAP"],
+      "Automated OWASP Threat Dragon v2.6.2 STRIDE threat modeling & schema governance alongside mandatory Checkmarx One AST, SonarQube Quality Gates, Trivy FS/Image, Gitleaks, Checkov IaC, and OWASP ZAP DAST.",
+    tags: ["Threat Dragon v2.6.2", "Checkmarx AST", "SonarQube", "Trivy", "Gitleaks", "OWASP ZAP"],
   },
   {
     title: "Supply Chain & Container Attestation",
     label: "Image Signing & SBOM",
     description:
-      "Standardized CycloneDX Software Bill of Materials (SBOM) generation and Sigstore Cosign v3 offline container image signing using OpenShift SHA256 digests and local .sig bundles.",
-    tags: ["CycloneDX", "SBOM", "Cosign", "Image Signing", "Supply Chain"],
+      "Standardized CycloneDX Software Bill of Materials (SBOM) generation, Sigstore Cosign v3 offline container image signing using OpenShift SHA256 digests, and Artifactory security report archival.",
+    tags: ["CycloneDX", "SBOM", "Cosign v3", "Image Signing", "Supply Chain"],
   },
   {
     title: "Playwright E2E & Browser Mirroring",
